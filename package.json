@@ -1,0 +1,37 @@
+{
+  "name": "substantiate",
+  "version": "1.0.0",
+  "description": "State management for fast prototyping in React",
+  "main": "dist/esbuild/index.js",
+  "scripts": {
+    "build": "yarn esbuild src/index.ts --bundle --outfile=dist/esbuild/index.js",
+    "lint": "eslint src/ --ext .js,.jsx,.ts,.tsx",
+    "tsc": "tsc -p tsconfig.json",
+    "clean": "rm -rf dist build",
+    "prepare-for-publish": "./scripts/prepare-for-publish.sh"
+  },
+  "types": "dist/tsc/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/maryrosecook/substantiate.git"
+  },
+  "author": "Mary Rose Cook <mary@maryrosecook.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/maryrosecook/substantiate/issues"
+  },
+  "homepage": "https://github.com/maryrosecook/substantiate#readme",
+  "dependencies": {
+    "react": "^17.0.2"
+  },
+  "devDependencies": {
+    "@types/node": "^16.4.13",
+    "@types/react": "^17.0.16",
+    "@typescript-eslint/eslint-plugin": "^4.29.0",
+    "@typescript-eslint/parser": "^4.29.0",
+    "esbuild": "^0.12.18",
+    "eslint": "^7.32.0",
+    "ts-node": "^10.1.0",
+    "typescript": "^4.3.5"
+  }
+}
